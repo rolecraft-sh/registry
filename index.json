@@ -1,5 +1,28 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-23T15:00:00.000Z",
-  "skills": []
+  "updated": "2026-07-23T15:30:00.000Z",
+  "skills": [
+    {
+      "slug": "task-decomposer",
+      "name": "Task Decomposer",
+      "description": "Decompose complex requests into structured, AI-friendly task sequences. Optimizes context window usage and manages multi-session workflows.",
+      "repo": "sametcelikbicak/task-decomposer",
+      "author": "sametcelikbicak",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 3
+    },
+    {
+      "slug": "coverage-guard",
+      "name": "Coverage Guard",
+      "description": "Enforces 100% test coverage for any JavaScript/TypeScript project. Works with Vitest, Jest, and other test runners.",
+      "repo": "sametcelikbicak/coverage-guard",
+      "author": "sametcelikbicak",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 3
+    }
+  ]
 }
