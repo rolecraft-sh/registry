@@ -1,0 +1,50 @@
+name: Validate Skill Submission
+on:
+  pull_request:
+    paths:
+      - 'index.json'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate JSON syntax
+        run: node -e "JSON.parse(require('fs').readFileSync('index.json','utf-8'))"
+
+      - name: Validate against schema
+        run: npx ajv-cli validate -s schema.json -d index.json --strict
+
+      - name: Check for duplicate slugs
+        run: node scripts/check-duplicates.js
+
+      - name: Detect changed slugs
+        id: changes
+        run: |
+          CHANGED=$(git diff --unified=0 origin/${{ github.base_ref }}...HEAD index.json \
+            | grep '^[+]' | grep -oP '"slug":\s*"\K[^"]+' \
+            | sort -u | paste -sd, -)
+          echo "CHANGED_SLUGS=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Verify publisher identity
+        env:
+          GH_PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
+        run: node scripts/verify-owner.js
+
+      - name: Auto-merge on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"

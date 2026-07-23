@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "rolecraft Registry Index",
+  "type": "object",
+  "required": ["skills", "updated"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp (ISO 8601)"
+    },
+    "skills": {
+      "type": "array",
+      "description": "List of published skills",
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "repo", "author", "latest"],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Unique skill identifier (kebab-case)"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Human-readable skill name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the skill"
+          },
+          "repo": {
+            "type": "string",
+            "pattern": "^[\\w.-]+/[\\w.-]+$",
+            "description": "GitHub repository (owner/repo)"
+          },
+          "author": {
+            "type": "string",
+            "description": "GitHub username of the publisher"
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^v?\\d+\\.\\d+\\.\\d+$"
+            },
+            "description": "Published versions (semver)"
+          },
+          "latest": {
+            "type": "string",
+            "pattern": "^v?\\d+\\.\\d+\\.\\d+$",
+            "description": "Latest published version"
+          },
+          "installs": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Approximate install count"
+          },
+          "stars": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "GitHub stargazers count"
+          }
+        }
+      }
+    }
+  }
+}
