@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-24T12:00:00.000Z",
+  "updated": "2026-07-24T12:58:54.571Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -8,7 +8,9 @@
       "description": "Decompose complex requests into structured, AI-friendly task sequences. Optimizes context window usage and manages multi-session workflows.",
       "repo": "sametcelikbicak/task-decomposer",
       "author": "sametcelikbicak",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -19,10 +21,23 @@
       "description": "Enforces 100% test coverage for any JavaScript/TypeScript project. Works with Vitest, Jest, and other test runners.",
       "repo": "sametcelikbicak/coverage-guard",
       "author": "sametcelikbicak",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
+    },
+    {
+      "slug": "flaky-test-detector",
+      "name": "flaky-test-detector",
+      "description": "\"Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite. Also for 'flaky test', 'flaky', 'intermittent failure', 'unstable test', 'test flakiness', 'test retry', 'CI flaky', 'non-deterministic test'.\"",
+      "repo": "sametcelikbicak/flaky-test-detector",
+      "author": "sametcelikbicak",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0"
     }
   ]
 }
