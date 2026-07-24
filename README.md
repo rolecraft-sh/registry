@@ -20,7 +20,7 @@
 
 The rolecraft Registry is a community-curated index of AI agent skills. Each entry is just **metadata** (slug, name, repo URL). The actual skill code stays in the author's own repository.
 
-Skills are added via PR. Validation and auto-merge are fully automated — no manual review needed.
+Skills are added via PR. Validation is fully automated — a maintainer reviews and merges once checks pass.
 
 ## Quick start
 
@@ -88,7 +88,7 @@ Every PR runs these automated checks:
 3. **Duplicate slugs** — No two skills with the same slug
 4. **Owner verification** — The `author` field must match the PR creator's GitHub username
 
-If all checks pass, the PR is **auto-merged**. If any fail, check the Action logs for details.
+If all checks pass, a maintainer is notified and merges the PR. If any check fails, check the Action logs for details.
 
 ## Schema reference
 
