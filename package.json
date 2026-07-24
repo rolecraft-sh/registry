@@ -1,0 +1,14 @@
+{
+  "name": "rolecraft-registry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Central skill registry for rolecraft",
+  "scripts": {
+    "validate": "node scripts/validate.js schema.json index.json"
+  },
+  "devDependencies": {
+    "ajv": "^8.0.0",
+    "ajv-formats": "^3.0.0"
+  }
+}

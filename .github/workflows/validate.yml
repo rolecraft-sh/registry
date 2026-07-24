@@ -25,7 +25,8 @@ jobs:
 
       - name: Validate against schema
         run: |
-          npx --yes -p ajv-cli@5 -p ajv-formats@3 -p ajv@8 ajv-cli validate -s schema.json -d index.json
+          npm install
+          node scripts/validate.js schema.json index.json
 
       - name: Check for duplicate slugs
         run: node scripts/check-duplicates.js
