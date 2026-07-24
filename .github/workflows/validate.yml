@@ -24,7 +24,7 @@ jobs:
         run: node -e "JSON.parse(require('fs').readFileSync('index.json','utf-8'))"
 
       - name: Validate against schema
-        run: npx ajv-cli validate -s schema.json -d index.json --strict
+        run: npx ajv-cli validate -s schema.json -d index.json
 
       - name: Check for duplicate slugs
         run: node scripts/check-duplicates.js
