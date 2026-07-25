@@ -1,13 +1,13 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-25T12:00:00.000Z",
+  "updated": "2026-07-25T12:30:00.000Z",
   "skills": [
     {
       "slug": "task-decomposer",
       "name": "Task Decomposer",
       "description": "Decompose complex requests into structured, AI-friendly task sequences. Optimizes context window usage and manages multi-session workflows.",
-      "repo": "sametcelikbicak/task-decomposer",
-      "author": "sametcelikbicak",
+      "repo": "rolecraft-sh/skills",
+      "author": "rolecraft-sh",
       "versions": [
         "v1.0.0"
       ],
@@ -19,8 +19,8 @@
       "slug": "coverage-guard",
       "name": "Coverage Guard",
       "description": "Enforces 100% test coverage for any JavaScript/TypeScript project. Works with Vitest, Jest, and other test runners.",
-      "repo": "sametcelikbicak/coverage-guard",
-      "author": "sametcelikbicak",
+      "repo": "rolecraft-sh/skills",
+      "author": "rolecraft-sh",
       "versions": [
         "v1.0.0"
       ],
@@ -32,8 +32,8 @@
       "slug": "flaky-test-detector",
       "name": "Flaky Test Detector",
       "description": "Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite. Also for 'flaky test', 'flaky', 'intermittent failure', 'unstable test', 'test flakiness', 'test retry', 'CI flaky', 'non-deterministic test'.",
-      "repo": "sametcelikbicak/flaky-test-detector",
-      "author": "sametcelikbicak",
+      "repo": "rolecraft-sh/skills",
+      "author": "rolecraft-sh",
       "versions": [
         "v1.0.0"
       ],
