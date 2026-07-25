@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-24T12:58:54.571Z",
+  "updated": "2026-07-25T12:00:00.000Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -30,14 +30,16 @@
     },
     {
       "slug": "flaky-test-detector",
-      "name": "flaky-test-detector",
-      "description": "\"Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite. Also for 'flaky test', 'flaky', 'intermittent failure', 'unstable test', 'test flakiness', 'test retry', 'CI flaky', 'non-deterministic test'.\"",
+      "name": "Flaky Test Detector",
+      "description": "Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite. Also for 'flaky test', 'flaky', 'intermittent failure', 'unstable test', 'test flakiness', 'test retry', 'CI flaky', 'non-deterministic test'.",
       "repo": "sametcelikbicak/flaky-test-detector",
       "author": "sametcelikbicak",
       "versions": [
         "v1.0.0"
       ],
-      "latest": "v1.0.0"
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 3
     }
   ]
 }
