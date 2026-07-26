@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-26T13:21:27.120Z",
+  "updated": "2026-07-26T14:03:32.377Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -412,6 +412,18 @@
       "slug": "git-housekeeping",
       "name": "git-housekeeping",
       "description": "Clean up local git branches, detect stale branches, manage stashes, and lint commit messages. Use when the user says 'cleanup branches', 'tidy git', 'remove merged branches', 'git housekeeping', 'stale branches', or wants to clean up local git state.",
+      "repo": "rolecraft-sh/skills",
+      "author": "sametcelikbicak",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "category": "development"
+    },
+    {
+      "slug": "caveman-output",
+      "name": "caveman-output",
+      "description": "Compress AI responses to bare essentials — no greetings, praise, or fluff. Just code, facts, and bullet points. Use when the user says 'caveman mode', 'short answer', 'no fluff', 'just the code', 'TL;DR', 'brevity', or 'be concise'.",
       "repo": "rolecraft-sh/skills",
       "author": "sametcelikbicak",
       "versions": [
