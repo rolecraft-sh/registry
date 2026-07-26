@@ -16,6 +16,7 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.number }}/merge
           fetch-depth: 2
+          allow-unsafe-pr-checkout: true
 
       - uses: actions/setup-node@v4
         with:
