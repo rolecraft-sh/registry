@@ -29,17 +29,17 @@ for (const slug of changedSlugs) {
   }
 
   const headers = token ? { Authorization: `Bearer ${token}` } : {}
-  const url = `https://api.github.com/repos/${repo}/contents/SKILL.md`
+  const url = `https://api.github.com/repos/${repo}`
   const res = await fetch(url, { headers })
   if (!res.ok && res.status !== 403) {
     console.error(
-      `Source repo "${repo}" does not exist or has no SKILL.md for slug "${slug}" (HTTP ${res.status})`,
+      `Source repo "${repo}" does not exist or is not accessible (HTTP ${res.status})`,
     )
     hasError = true
   } else if (res.status === 403) {
     console.log(`⚠ Rate limited checking "${repo}" — skipping`)
   } else {
-    console.log(`✓ "${repo}" confirmed (SKILL.md found)`)
+    console.log(`✓ "${repo}" confirmed`)
   }
 }
 
