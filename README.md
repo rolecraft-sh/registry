@@ -87,8 +87,9 @@ Every PR runs these automated checks:
 2. **Schema validation** — Each entry must match [`schema.json`](./schema.json)
 3. **Duplicate slugs** — No two skills with the same slug
 4. **Owner verification** — The `author` field must match the PR creator's GitHub username
+5. **Source repo check** — The `repo` must be a valid GitHub repository
 
-If all checks pass, a maintainer is notified and merges the PR. If any check fails, check the Action logs for details.
+If all checks pass, the PR is **auto-merged**. If any check fails, check the Action logs for details.
 
 ## Schema reference
 
