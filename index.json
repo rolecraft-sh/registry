@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-25T12:30:00.000Z",
+  "updated": "2026-07-26T10:00:00.000Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -8,9 +8,8 @@
       "description": "Decompose complex requests into structured, AI-friendly task sequences. Optimizes context window usage and manages multi-session workflows.",
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
-      "versions": [
-        "v1.0.0"
-      ],
+      "category": "development",
+      "versions": ["v1.0.0"],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -21,9 +20,8 @@
       "description": "Enforces 100% test coverage for any JavaScript/TypeScript project. Works with Vitest, Jest, and other test runners.",
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
-      "versions": [
-        "v1.0.0"
-      ],
+      "category": "testing",
+      "versions": ["v1.0.0"],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -31,15 +29,326 @@
     {
       "slug": "flaky-test-detector",
       "name": "Flaky Test Detector",
-      "description": "Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite. Also for 'flaky test', 'flaky', 'intermittent failure', 'unstable test', 'test flakiness', 'test retry', 'CI flaky', 'non-deterministic test'.",
+      "description": "Detect, analyze, and fix flaky tests across any test runner. Use when tests intermittently fail in CI, tests pass locally but fail on CI, tests fail non-deterministically, or need to stabilize a flaky test suite.",
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
-      "versions": [
-        "v1.0.0"
-      ],
+      "category": "testing",
+      "versions": ["v1.0.0"],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
+    },
+    {
+      "slug": "incremental-implementation",
+      "name": "Incremental Implementation",
+      "description": "Delivers changes incrementally in thin vertical slices. Implement one piece, test it, verify it, then expand. Avoid implementing an entire feature in one pass.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "test-driven-development",
+      "name": "Test-Driven Development",
+      "description": "Red-Green-Refactor, test pyramid (80/15/5), test sizes, DAMP over DRY, Beyonce Rule, browser testing. Use when implementing logic, fixing bugs, or changing behavior.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "testing",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "context-engineering",
+      "name": "Context Engineering",
+      "description": "Feed agents the right information at the right time. Rules files, context packing, MCP integrations. Use when starting a session, switching tasks, or when output quality drops.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "code-review-and-quality",
+      "name": "Code Review & Quality",
+      "description": "Five-axis review, change sizing (~100 lines), severity labels (Nit/Optional/FYI), review speed norms, splitting strategies. Use before merging any change.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "code-review",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "security-and-hardening",
+      "name": "Security & Hardening",
+      "description": "OWASP Top 10 prevention, auth patterns, secrets management, dependency auditing, three-tier boundary system. Use when handling user input, auth, data storage, or external integrations.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "security",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "git-workflow-and-versioning",
+      "name": "Git Workflow & Versioning",
+      "description": "Trunk-based development, atomic commits, change sizing (~100 lines), the commit-as-save-point pattern. Use when making any code change.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "ci-cd-and-automation",
+      "name": "CI/CD & Automation",
+      "description": "Shift Left, Faster is Safer, feature flags, quality gate pipelines, failure feedback loops. Use when setting up or modifying build and deploy pipelines.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "devops",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "performance-optimization",
+      "name": "Performance Optimization",
+      "description": "Measure-first approach. Core Web Vitals targets, profiling workflows, bundle analysis, anti-pattern detection. Use when performance requirements exist or you suspect regressions.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "debugging-and-error-recovery",
+      "name": "Debugging & Error Recovery",
+      "description": "Five-step triage: reproduce, localize, reduce, fix, guard. Stop-the-line rule, safe fallbacks. Use when tests fail, builds break, or behavior is unexpected.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "frontend-ui-engineering",
+      "name": "Frontend UI Engineering",
+      "description": "Component architecture, design systems, state management, responsive design, WCAG 2.1 AA accessibility. Use when building or modifying user-facing interfaces.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "frontend",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "api-and-interface-design",
+      "name": "API & Interface Design",
+      "description": "Contract-first design, Hyrum's Law, One-Version Rule, error semantics, boundary validation. Use when designing APIs, module boundaries, or public interfaces.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "design",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "source-driven-development",
+      "name": "Source-Driven Development",
+      "description": "Ground every framework decision in official documentation. Verify, cite sources, flag what's unverified. Use when you want authoritative, source-cited code for any framework or library.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "doubt-driven-development",
+      "name": "Doubt-Driven Development",
+      "description": "Adversarial fresh-context review of every non-trivial decision in-flight. CLAIM -> EXTRACT -> DOUBT -> RECONCILE -> STOP. Use when stakes are high or working in unfamiliar code.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "methodology",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "code-simplification",
+      "name": "Code Simplification",
+      "description": "Chesterton's Fence, Rule of 500, reduce complexity while preserving exact behavior. Use when code works but is harder to read or maintain than it should be.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "development",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "deprecation-and-migration",
+      "name": "Deprecation & Migration",
+      "description": "Code-as-liability mindset, compulsory vs advisory deprecation, migration patterns, zombie code removal. Use when removing old systems, migrating users, or sunsetting features.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "maintenance",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "browser-testing-with-devtools",
+      "name": "Browser Testing with DevTools",
+      "description": "Chrome DevTools MCP for live runtime data. DOM inspection, console logs, network traces, performance profiling. Use when building or debugging anything that runs in a browser.",
+      "repo": "rolecraft-sh/skills",
+      "author": "addyosmani",
+      "category": "testing",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "react-best-practices",
+      "name": "React Best Practices",
+      "description": "React and Next.js performance optimization guidelines. Use when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "frontend",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "web-design-guidelines",
+      "name": "Web Design Guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to review UI, check accessibility, audit design, review UX, or check a site against best practices.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "ui-ux",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "vercel-optimize",
+      "name": "Vercel Optimize",
+      "description": "Vercel cost and performance optimization on deployed projects. Collect metrics, investigate metric-backed candidates, produce ranked recommendations. Works with Next.js, SvelteKit, Nuxt, Astro.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "frontend",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "composition-patterns",
+      "name": "React Composition Patterns",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "frontend",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "writing-guidelines",
+      "name": "Writing Guidelines",
+      "description": "Review docs and prose for Writing Guidelines compliance. Use when asked to review documentation, check writing style, audit prose, or review docs voice and tone.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "content",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "react-native-skills",
+      "name": "React Native Skills",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "mobile",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "react-view-transitions",
+      "name": "React View Transitions",
+      "description": "Guide for implementing smooth, native-feeling animations using React's View Transition API. Use when adding page transitions, animating route changes, or creating shared element animations.",
+      "repo": "rolecraft-sh/skills",
+      "author": "vercel-labs",
+      "category": "frontend",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "grill-me",
+      "name": "Grill Me",
+      "description": "A relentless interview to sharpen a plan or design. Use when you need to stress-test a proposal, identify blind spots, or refine requirements through adversarial questioning.",
+      "repo": "rolecraft-sh/skills",
+      "author": "mattpocock",
+      "category": "code-review",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "grill-with-docs",
+      "name": "Grill with Docs",
+      "description": "Grill a plan or design with documentation-backed scrutiny. Use when you want requirements stress-tested against existing documentation, API references, or technical specifications.",
+      "repo": "rolecraft-sh/skills",
+      "author": "mattpocock",
+      "category": "code-review",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "tdd",
+      "name": "TDD",
+      "description": "Test-driven development: red -> green -> refactor. Use when building features or fixing bugs test-first, or when wanting integration tests.",
+      "repo": "rolecraft-sh/skills",
+      "author": "mattpocock",
+      "category": "testing",
+      "versions": ["v1.0.0"],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
     }
   ]
 }

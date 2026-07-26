@@ -55,6 +55,10 @@
             "pattern": "^v?\\d+\\.\\d+\\.\\d+$",
             "description": "Latest published version"
           },
+          "category": {
+            "type": "string",
+            "description": "Skill category (e.g. testing, development, frontend, security)"
+          },
           "installs": {
             "type": "integer",
             "minimum": 0,
