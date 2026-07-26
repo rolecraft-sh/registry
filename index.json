@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-26T10:00:00.000Z",
+  "updated": "2026-07-26T13:21:27.120Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -9,7 +9,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -21,7 +23,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
       "category": "testing",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -33,7 +37,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
       "category": "testing",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
@@ -45,7 +51,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -57,7 +65,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "testing",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -69,7 +79,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -81,7 +93,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "code-review",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -93,7 +107,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "security",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -105,7 +121,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -117,7 +135,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "devops",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -129,7 +149,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -141,7 +163,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -153,7 +177,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "frontend",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -165,7 +191,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "design",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -177,7 +205,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -189,7 +219,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "methodology",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -201,7 +233,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "development",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -213,7 +247,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "maintenance",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -225,7 +261,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "addyosmani",
       "category": "testing",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -237,7 +275,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "frontend",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -249,7 +289,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "ui-ux",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -261,7 +303,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "frontend",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -273,7 +317,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "frontend",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -285,7 +331,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "content",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -297,7 +345,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "mobile",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -309,7 +359,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "vercel-labs",
       "category": "frontend",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -321,7 +373,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "code-review",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -333,7 +387,9 @@
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "code-review",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
@@ -345,10 +401,24 @@
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "testing",
-      "versions": ["v1.0.0"],
+      "versions": [
+        "v1.0.0"
+      ],
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 0
+    },
+    {
+      "slug": "git-housekeeping",
+      "name": "git-housekeeping",
+      "description": "Clean up local git branches, detect stale branches, manage stashes, and lint commit messages. Use when the user says 'cleanup branches', 'tidy git', 'remove merged branches', 'git housekeeping', 'stale branches', or wants to clean up local git state.",
+      "repo": "rolecraft-sh/skills",
+      "author": "sametcelikbicak",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "category": "development"
     }
   ]
 }
