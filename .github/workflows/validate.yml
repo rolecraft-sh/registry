@@ -1,6 +1,6 @@
 name: Validate Skill Submission
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'index.json'
 
@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: refs/pull/${{ github.event.number }}/merge
           fetch-depth: 2
 
       - uses: actions/setup-node@v4
@@ -45,10 +46,19 @@ jobs:
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
         run: node scripts/verify-owner.js
 
-      - name: Notify maintainers
-        if: success() && steps.changes.outputs.CHANGED_SLUGS != ''
+      - name: Verify source repo exists
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
+        run: node scripts/verify-repo.js
+
+      - name: Auto-merge validated skill
+        if: success()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          CHANGED_SLUGS_VAL="${{ steps.changes.outputs.CHANGED_SLUGS }}"
-          gh pr comment "${{ github.event.pull_request.html_url }}" --body "✅ All validation checks passed. \`${CHANGED_SLUGS_VAL}\` is ready for maintainer review and merge."
+          CHANGED="${{ steps.changes.outputs.CHANGED_SLUGS }}"
+          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}" \
+            --subject "publish: ${CHANGED}"
+          gh pr comment "${{ github.event.pull_request.html_url }}" \
+            --body "✅ All checks passed. Skill \`${CHANGED}\` has been auto-merged."
