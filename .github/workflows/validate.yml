@@ -3,6 +3,11 @@ on:
   pull_request_target:
     paths:
       - 'index.json'
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.json'
 
 permissions:
   contents: write
