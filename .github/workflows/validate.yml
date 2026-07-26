@@ -34,10 +34,10 @@ jobs:
       - name: Detect changed slugs
         id: changes
         run: |
-          CHANGED=$(git diff --unified=0 origin/${{ github.base_ref }}...HEAD index.json \
+          CHANGED=$(git diff --unified=0 ${{ github.event.pull_request.base.sha }}...HEAD -- index.json \
             | grep '^[+]' | grep -oP '"slug":\s*"\K[^"]+' \
             | sort -u | paste -sd, -)
-          echo "CHANGED_SLUGS=$CHANGED" >> $GITHUB_OUTPUT
+          echo "CHANGED_SLUGS=$CHANGED" >> "$GITHUB_OUTPUT"
 
       - name: Verify publisher identity
         env:
@@ -46,7 +46,7 @@ jobs:
         run: node scripts/verify-owner.js
 
       - name: Notify maintainers
-        if: success()
+        if: success() && steps.changes.outputs.CHANGED_SLUGS != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
