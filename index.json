@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-27T13:45:20.000Z",
+  "updated": "2026-07-27T14:30:00.000Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -725,6 +725,202 @@
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
+    },
+    {
+      "slug": "security-review",
+      "name": "security-review",
+      "description": "Security code review for vulnerabilities. Use when asked to \"security review\", \"find vulnerabilities\", \"check for security issues\", \"audit security\", \"OWASP review\", or review code for injection, X...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "security",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "gha-security-review",
+      "name": "gha-security-review",
+      "description": "GitHub Actions security review for workflow exploitation vulnerabilities. Use when asked to \"review GitHub Actions\", \"audit workflows\", \"check CI security\", \"GHA security\", \"workflow security revie...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "security",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "skill-scanner",
+      "name": "skill-scanner",
+      "description": "Scan agent skills for security issues. Use when asked to \"scan a skill\",",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "security",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "find-bugs",
+      "name": "find-bugs",
+      "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch.",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "security",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "blog-writing-guide",
+      "name": "blog-writing-guide",
+      "description": "Write, review, and improve blog posts for the Sentry engineering blog following Sentry's specific writing standards, voice, and quality bar. Use this skill whenever someone asks to write a blog pos...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "content",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "document-api-endpoint",
+      "name": "document-api-endpoint",
+      "description": "Document and type a Sentry API endpoint. Write or fix @extend_schema decorators, specify response TypedDicts, type request parameters, correct type drift between the declared schema and the runtime...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "content",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "replay-ux-research",
+      "name": "replay-ux-research",
+      "description": "Analyze Sentry session replays to surface UX patterns, pain points, and user journeys for a given product area. Use when asked to \"show me how users use\", \"day in the life\", \"UX research\", \"replay ...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "ui-ux",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "code-simplifier",
+      "name": "code-simplifier",
+      "description": "Simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Use when asked to \"simplify code\", \"clean up code\", \"refactor for clarity\", \"improve re...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "maintenance",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "presentation-creator",
+      "name": "presentation-creator",
+      "description": "Create data-driven presentation slides using React, Vite, and Recharts with Sentry branding. Use when asked to \"create a presentation\", \"build slides\", \"make a deck\", \"create a data presentation\", ...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "design",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "claude-settings-audit",
+      "name": "claude-settings-audit",
+      "description": "Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to al...",
+      "repo": "getsentry/skills",
+      "author": "getsentry",
+      "category": "devops",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "frontend-design",
+      "name": "frontend-design",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated de...",
+      "repo": "anthropics/skills",
+      "author": "anthropics",
+      "category": "design",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "brand-guidelines",
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatt...",
+      "repo": "anthropics/skills",
+      "author": "anthropics",
+      "category": "design",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "theme-factory",
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifac...",
+      "repo": "anthropics/skills",
+      "author": "anthropics",
+      "category": "design",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
+    },
+    {
+      "slug": "doc-coauthoring",
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This ...",
+      "repo": "anthropics/skills",
+      "author": "anthropics",
+      "category": "content",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0",
+      "installs": 0,
+      "stars": 0
     }
   ]
 }
