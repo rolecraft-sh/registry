@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-27T13:32:02.061Z",
+  "updated": "2026-07-27T13:34:24.000Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -423,7 +423,7 @@
     {
       "slug": "caveman-output",
       "name": "caveman-output",
-      "description": "Compress AI responses to bare essentials — no greetings, praise, or fluff. Just code, facts, and bullet points. Use when the user says 'caveman mode', 'short answer', 'no fluff', 'just the code', 'TL;DR', 'brevity', or 'be concise'.",
+      "description": "Compress AI responses to bare essentials \u2014 no greetings, praise, or fluff. Just code, facts, and bullet points. Use when the user says 'caveman mode', 'short answer', 'no fluff', 'just the code', 'TL;DR', 'brevity', or 'be concise'.",
       "repo": "rolecraft-sh/skills",
       "author": "rolecraft-sh",
       "versions": [
@@ -659,7 +659,7 @@
     {
       "slug": "to-spec",
       "name": "to-spec",
-      "description": "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker \u2014 no interview, just synthesis of what you've already discussed.",
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "development",
@@ -673,7 +673,7 @@
     {
       "slug": "to-tickets",
       "name": "to-tickets",
-      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket locally, or native blocking links on a real tracker.",
+      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker \u2014 edges as text in one file per ticket locally, or native blocking links on a real tracker.",
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "development",
@@ -687,7 +687,7 @@
     {
       "slug": "triage",
       "name": "triage",
-      "description": "Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.",
+      "description": "Move issues and external PRs through a state machine of triage roles \u2014 categorise, verify, grill if needed, and write agent-ready briefs.",
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "development",
@@ -701,7 +701,7 @@
     {
       "slug": "wayfinder",
       "name": "wayfinder",
-      "description": "Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "description": "Plan a huge chunk of work \u2014 more than one agent session can hold \u2014 as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "methodology",
@@ -715,7 +715,7 @@
     {
       "slug": "writing-great-skills",
       "name": "writing-great-skills",
-      "description": "Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.",
+      "description": "Reference for writing and editing skills well \u2014 the vocabulary and principles that make a skill predictable.",
       "repo": "rolecraft-sh/skills",
       "author": "mattpocock",
       "category": "content",
@@ -725,17 +725,6 @@
       "latest": "v1.0.0",
       "installs": 0,
       "stars": 3
-    },
-    {
-      "slug": "rolecraft-publish-test",
-      "name": "RoleCraft Publish Test",
-      "description": "Test skill for rolecraft publish end-to-end testing",
-      "repo": "sametcelikbicak/rolecraft-publish-test",
-      "author": "sametcelikbicak",
-      "versions": [
-        "v1.0.0"
-      ],
-      "latest": "v1.0.0"
     }
   ]
 }
