@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: refs/pull/${{ github.event.number }}/merge
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
           allow-unsafe-pr-checkout: true
 
@@ -41,25 +41,28 @@ jobs:
       - name: Detect changed slugs
         id: changes
         run: |
-          CHANGED=$(git diff --unified=0 ${{ github.event.pull_request.base.sha }} -- index.json \
+          BASE_SHA="${{ github.event.pull_request.base.sha || github.event.before }}"
+          CHANGED=$(git diff --unified=0 "$BASE_SHA" -- index.json \
             | grep '^[+]' | grep -oP '"slug":\s*"\K[^"]+' \
             | sort -u | paste -sd, -)
           echo "CHANGED_SLUGS=$CHANGED" >> "$GITHUB_OUTPUT"
 
       - name: Verify publisher identity
+        if: github.event_name == 'pull_request_target'
         env:
           GH_PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
         run: node scripts/verify-owner.js
 
       - name: Verify source repo exists
+        if: steps.changes.outputs.CHANGED_SLUGS != ''
         env:
           GITHUB_TOKEN: ${{ github.token }}
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
         run: node scripts/verify-repo.js
 
       - name: Auto-merge validated skill
-        if: success()
+        if: success() && github.event_name == 'pull_request_target'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
