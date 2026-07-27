@@ -61,6 +61,7 @@ Example entry:
   "slug": "my-skill",
   "name": "My Skill",
   "description": "What this skill does",
+  "category": "development",
   "repo": "your-username/your-skill-repo",
   "author": "your-username",
   "versions": ["v1.0.0"],
@@ -104,17 +105,30 @@ Full schema at [`schema.json`](./schema.json). Required fields:
 | `author` | string | yes | `user` |
 | `versions` | array | yes | `["v1.0.0"]` |
 | `latest` | string | yes | `v1.0.0` |
+| `category` | string | no | `testing` |
 | `installs` | number | no | `0` |
 | `stars` | number | no | `0` |
 
-## Currently listed skills
+## Category distribution
 
-| Slug | Name | Author | Stars |
-|------|------|--------|-------|
-| `task-decomposer` | [Task Decomposer](https://github.com/sametcelikbicak/task-decomposer) | sametcelikbicak | 3 |
-| `coverage-guard` | [Coverage Guard](https://github.com/sametcelikbicak/coverage-guard) | sametcelikbicak | 3 |
+| Category | Count |
+|----------|-------|
+| development | 23 |
+| design | 6 |
+| testing | 5 |
+| security | 5 |
+| frontend | 5 |
+| methodology | 5 |
+| content | 5 |
+| devops | 4 |
+| code-review | 3 |
+| ui-ux | 2 |
+| maintenance | 2 |
+| mobile | 1 |
 
-Want to see yours here? [Publish your skill](#how-to-add-a-skill-manual-pr).
+**Total: 66 skills** across 12 categories. The full list is in [`index.json`](./index.json).
+
+Want your skill here? [Publish it](#how-to-add-a-skill-manual-pr).
 
 ## Related
 
