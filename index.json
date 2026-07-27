@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "updated": "2026-07-26T13:21:27.120Z",
+  "updated": "2026-07-27T13:26:05.980Z",
   "skills": [
     {
       "slug": "task-decomposer",
@@ -419,6 +419,17 @@
       ],
       "latest": "v1.0.0",
       "category": "development"
+    },
+    {
+      "slug": "rolecraft-publish-test",
+      "name": "RoleCraft Publish Test",
+      "description": "Test skill for rolecraft publish end-to-end testing",
+      "repo": "sametcelikbicak/rolecraft-publish-test",
+      "author": "sametcelikbicak",
+      "versions": [
+        "v1.0.0"
+      ],
+      "latest": "v1.0.0"
     }
   ]
 }
