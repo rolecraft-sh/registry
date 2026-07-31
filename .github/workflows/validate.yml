@@ -21,10 +21,10 @@ jobs:
       HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
-      # Security: pull_request_target gives the workflow a token with write
-      # permissions, so untrusted PR code must NEVER run. We check out the
-      # TRUSTED base branch (package.json, scripts/, node_modules all come
-      # from base) and read only index.json from the PR/push commit via git.
+      # Security: with pull_request_target, untrusted PR code must never run.
+      # We check out the TRUSTED base branch (deps: package.json, scripts/,
+      # node_modules all come from base) and read only index.json from the
+      # PR/push commit via git show.
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.base.sha || github.sha }}
@@ -36,7 +36,6 @@ jobs:
 
       - name: Load skill index from PR/push commit
         run: |
-          # Fork PR heads are not in origin; fetch them via refs/pull/<N>/head.
           if [ -n "$PR_NUMBER" ]; then
             git fetch origin "refs/pull/${PR_NUMBER}/head:pr_head"
             echo "HEAD_SHA=pr_head" >> "$GITHUB_ENV"
@@ -75,6 +74,28 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
         run: node scripts/verify-repo.js
+
+      # Validate each changed skill can be resolved & installed by rolecraft.
+      # This catches malformed SKILL.md, broken frontmatter, or missing sources
+      # before they enter the registry.
+      - name: Validate skills with rolecraft
+        if: steps.changes.outputs.CHANGED_SLUGS != ''
+        env:
+          CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
+        run: |
+          npm install -g rolecraft@latest
+          IFS=',' read -ra SLUGS <<< "$CHANGED_SLUGS"
+          for slug in "${SLUGS[@]}"; do
+            slug=$(echo "$slug" | xargs) # trim whitespace
+            repo=$(node -e "const d=JSON.parse(require('fs').readFileSync('index.json','utf-8')); const s=d.skills.find(x=>x.slug==='$slug'); process.stdout.write(s? s.repo : '')")
+            if [ -z "$repo" ]; then
+              echo "❌ Slug '$slug' not found in index.json"
+              exit 1
+            fi
+            echo "🔍 Validating: $slug (source: $repo) ..."
+            rolecraft install "$repo" --skill "$slug" --dry-run --yes
+            echo "✅ $slug passed rolecraft validation"
+          done
 
       - name: Auto-merge validated skill
         if: success() && github.event_name == 'pull_request_target'
