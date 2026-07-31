@@ -16,16 +16,32 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
+      # Security: pull_request_target gives the workflow a token with write
+      # permissions, so untrusted PR code must NEVER run. We check out the
+      # TRUSTED base branch (package.json, scripts/, node_modules all come
+      # from base) and read only index.json from the PR/push commit via git.
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
           fetch-depth: 0
-          allow-unsafe-pr-checkout: true
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Load skill index from PR/push commit
+        run: |
+          # Fork PR heads are not in origin; fetch them via refs/pull/<N>/head.
+          if [ -n "$PR_NUMBER" ]; then
+            git fetch origin "refs/pull/${PR_NUMBER}/head:pr_head"
+            echo "HEAD_SHA=pr_head" >> "$GITHUB_ENV"
+          fi
+          git show "${HEAD_SHA}:index.json" > index.json
 
       - name: Validate JSON syntax
         run: node -e "JSON.parse(require('fs').readFileSync('index.json','utf-8'))"
@@ -41,8 +57,7 @@ jobs:
       - name: Detect changed slugs
         id: changes
         run: |
-          BASE_SHA="${{ github.event.pull_request.base.sha || github.event.before }}"
-          CHANGED=$(git diff --unified=0 "$BASE_SHA" -- index.json \
+          CHANGED=$(git diff --unified=0 "$BASE_SHA" "$HEAD_SHA" -- index.json \
             | grep '^[+]' | grep -oP '"slug":\s*"\K[^"]+' \
             | sort -u | paste -sd, -)
           echo "CHANGED_SLUGS=$CHANGED" >> "$GITHUB_OUTPUT"
