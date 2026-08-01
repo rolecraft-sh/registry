@@ -80,22 +80,23 @@ jobs:
       # before they enter the registry.
       - name: Validate skills with rolecraft
         if: steps.changes.outputs.CHANGED_SLUGS != ''
+        uses: rolecraft-sh/rolecraft-action@v1
         env:
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
-        run: |
-          npm install -g rolecraft@latest
-          IFS=',' read -ra SLUGS <<< "$CHANGED_SLUGS"
-          for slug in "${SLUGS[@]}"; do
-            slug=$(echo "$slug" | xargs) # trim whitespace
-            repo=$(node -e "const d=JSON.parse(require('fs').readFileSync('index.json','utf-8')); const s=d.skills.find(x=>x.slug==='$slug'); process.stdout.write(s? s.repo : '')")
-            if [ -z "$repo" ]; then
-              echo "❌ Slug '$slug' not found in index.json"
-              exit 1
-            fi
-            echo "🔍 Validating: $slug (source: $repo) ..."
-            rolecraft install "$repo" --skill "$slug" --dry-run --yes
-            echo "✅ $slug passed rolecraft validation"
-          done
+        with:
+          script: |
+            IFS=',' read -ra SLUGS <<< "$CHANGED_SLUGS"
+            for slug in "${SLUGS[@]}"; do
+              slug=$(echo "$slug" | xargs)
+              repo=$(node -e "const d=JSON.parse(require('fs').readFileSync('index.json','utf-8')); const s=d.skills.find(x=>x.slug==='$slug'); process.stdout.write(s? s.repo : '')")
+              if [ -z "$repo" ]; then
+                echo "❌ Slug '$slug' not found in index.json"
+                exit 1
+              fi
+              echo "🔍 Validating: $slug (source: $repo) ..."
+              rolecraft install "$repo" --skill "$slug" --dry-run --yes
+              echo "✅ $slug passed rolecraft validation"
+            done
 
       - name: Auto-merge validated skill
         if: success() && github.event_name == 'pull_request_target'
