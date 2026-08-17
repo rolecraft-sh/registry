@@ -80,7 +80,9 @@ jobs:
       # before they enter the registry.
       - name: Validate skills with rolecraft
         if: steps.changes.outputs.CHANGED_SLUGS != ''
-        uses: rolecraft-sh/rolecraft-action@v1
+        # Pinned to full commit SHA (v1) — mutable tags are unsafe with
+        # pull_request_target + write permissions (supply-chain hardening).
+        uses: rolecraft-sh/rolecraft-action@0cbe93d3791d8f434f2862f758b64b4d531e74a0 # v1
         env:
           CHANGED_SLUGS: ${{ steps.changes.outputs.CHANGED_SLUGS }}
         with:
